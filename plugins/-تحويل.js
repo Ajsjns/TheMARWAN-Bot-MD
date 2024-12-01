@@ -2,7 +2,7 @@ const items = ['limit', 'exp', 'joincount', 'money', 'potion', 'trash', 'wood', 
 let confirmation = {} 
 
 async function handler(m, { conn, args, usedPrefix, command }) {
-    if (confirmation[m.sender]) return m.reply('انت بتعمل تحويل دلوقتي')
+    if (confirmation[m.sender]) return m.reply('انت بتعمل تحويل ذا الوقت')
     
     let user = global.db.data.users[m.sender]
     const item = items.filter(v => v in user && typeof user[v] == 'number')
@@ -30,7 +30,7 @@ async function handler(m, { conn, args, usedPrefix, command }) {
     
     if (!who) return m.reply(`${ag} *من فضلك حدد المستخدم*`)
     if (!(who in global.db.data.users)) return m.reply(`${fg}*المستخدم ${who} مش موجود في قاعدة البيانات*`)
-    if (user[type] * 1 < count) return m.reply(`${fg}*مش عندك كفاية من ${type} عشان تعمل التحويل*`)
+    if (user[type] * 1 < count) return m.reply(`${fg}*لايوجد لديك كفاية من ${type} عشان تعمل التحويل*`)
     
     let mentionedJid = [who]
     let username = conn.getName(who)
