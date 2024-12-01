@@ -3,7 +3,7 @@ import uploadImage from '../lib/uploadImage.js';
 const handler = async (m, { conn, text, args, usedPrefix, command }) => {
   const q = m.quoted ? m.quoted : m;
   const mime = (q.msg || q).mimetype || q.mediaType || '';
-  if (!/image/g.test(mime)) throw '*اعمل ريب ع الصوره الي عايز تحولها انمي*🧚🏼‍♂️';
+  if (!/image/g.test(mime)) throw '*اعمل منشن على الصوره الي تبي تحولها انمي*🧚🏼‍♂️';
   
   m.react(`⌛`);
   
