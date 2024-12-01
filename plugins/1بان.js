@@ -6,7 +6,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         who = m.chat
     }
     
-    if (!who) throw `*منشن للي عايز تعملو بان*🧚🏼‍♂️`
+    if (!who) throw `*منشن للي تبي تسويله بان*🧚🏼‍♂️`
 
     // Check if the user exists in the database
    if (!(who in global.db.data.users)) throw `*المستخدم غير موجود في قاعدة البيانات*`
@@ -18,7 +18,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     let imageUrl = 'https://qu.ax/QjnOg.jpg'  // URL للصورة الثابتة
 
     await conn.sendMessage(m.chat, { 
-        caption: '*المستخدم خد بان مش هيعرف يستخدم اوامر بوت*', 
+        caption: '*المستخدم اخذ بان لن يستطيع استخدام اوامر بوت*', 
         image: { url: imageUrl },  // إضافة الصورة هنا
         contextInfo: { 
             externalAdReply: { 
