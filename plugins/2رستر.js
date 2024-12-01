@@ -1,7 +1,7 @@
 import { spawn } from 'child_process'
 
 let handler = async (m, { conn, isROwner, text }) => {
-    if (!process.send) throw '*متعملش*: node main.js\n*اعمل*: node index.js'
+    if (!process.send) throw '*لاتسوي*: node main.js\n*اعمل*: node index.js'
     if (conn.user.jid == conn.user.jid) {
         async function loading() {
             var hawemod = ["*10%*", "*30%*", "*50%*", "*80%*", "*100%*"]
